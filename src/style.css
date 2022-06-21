@@ -1,0 +1,100 @@
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/* PRIMERA PANTALLA */
+.screen-one {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url("./img/fondo.png");
+  background-size: cover;
+  background-position: 50%;
+  color: #fff;
+}
+.screen-one img {
+  width: 40%;
+  margin: 0 0 0 50px;
+}
+.welcome {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.welcome h1 {
+  margin: 180px 80px 30px 0;
+  font-size: 70px;
+}
+.welcome p {
+  font-size: 30px;
+  margin: 0 80px 0 0;
+}
+.welcome button {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 50px 80px 0 0;
+  width: 220px;
+  height: 70px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0px 4.4541425704956055px 4.4541425704956055px 0px
+    rgba(0, 0, 0, 0.25) inset;
+}
+.welcome button:hover {
+  background-color: #fe2f13;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+/* SEGUNDA PANTALLA */
+.screen-two {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.board-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+  perspective: 800px;
+}
+.container-card {
+width: 150px;
+height: 190px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: rgba(0, 0, 0, 0.2) 0 5px 15px;
+}
+.front-card,
+.back-card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  display: flex ;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.back-card {
+  backface-visibility: hidden;
+  background: rgba(196, 196, 196, 1);
+}
+.front-card img {
+  width: 120px
+}
+.back-card img {
+  width: 100px
+}
+.toggleCard {
+  transform: rotateY(180deg);
+}

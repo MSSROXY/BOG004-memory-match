@@ -13,14 +13,34 @@
 //   .then(console.log)
 //   .catch(console.error);
 //
+import pokemon from "../data/pokemon/pokemon.js";
 
-const App = () => {
-  const el = document.createElement('div');
+let data = pokemon.items;
 
-  el.className = 'App';
-  el.textContent = 'Hola mundo!';
+export const randomizeCards = () => {data.sort(() => Math.random() - 0.5)}
 
-  return el;
+export const GenerateBoard = () => {
+  const board = document.createElement("div");
+  board.className="board-cards"
+  let cards = [];
+
+  for (let j = 0; j < 2; j++) {
+    for (let i = 0; i < data.length; i++) {
+
+      cards.push(`
+        <div class="container-card" id="${data[i].id}" name="${data[i].id}">
+          <div class="front-card">
+            <img src="${data[i].image}" alt="${data[i].id}"/>
+          </div>
+          <div class="back-card">
+            <img src="../img/pokebola.png" alt="pokebola"/>
+          </div>
+        </div>`);
+    }
+  }
+  randomizeCards();
+  board.innerHTML = cards.join("");
+  return board;
 };
+GenerateBoard();
 
-export default App;

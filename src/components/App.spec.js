@@ -1,8 +1,8 @@
-import App from './App.js';
+import {GenerateBoard} from "./App.js"
 
-describe('App', () => {
+describe('GenerateBoard', () => {
   it('should render without crashing', () => {
-    const el = App();
+    const el = GenerateBoard();
     expect(el instanceof HTMLElement).toBe(true);
   });
 });
