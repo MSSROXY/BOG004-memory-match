@@ -15,7 +15,7 @@
         <img src="./img/pikachu.png" alt="pikachu" />
         <div class="welcome">
           <h1>Hola, Usuario!</h1>
-          <p>Juega con MemoryMatch</p> 
+          <p>Juega con MemoryMatch</p>
           <p>y sé un Maestro Pokemón</p>
           <button id="btn-play">Jugar</button>
         </div>
@@ -25,15 +25,30 @@
         <h1>Lives : <span class="player-lives"></span></h1>
       </section>
 
-      <section class="modal">
-        holaaa soy tu modal
+      <section class="modal-lose">
+        <div class="container-modal">
+          <img
+            src="https://media.giphy.com/media/7SF5scGB2AFrgsXP63/giphy.gif"
+            alt="sad-pikachu"
+          />
+          <h1>GAME OVER</h1>
+          <p>Nadie dijo que sería fácil, pero el que la sigue la consigue</p>
+          <div class="container-button">
+            <button class="play-again">VOLVER A JUGAR</button>
+          </div>
+        </div>
       </section>
 
-      <section class="screen-three">
-        SOY SCREEN TRESSSS
+      <section class="modal-win">
+        <div class="container-modal">
+          <img src="https://i.pinimg.com/originals/1a/13/9f/1a139fd89034630d91048ac76541106a.gif" alt="happy-pikachu">
+          <h1>YOU WIN</h1>
+          <p></p>
+          <div class="container-button">
+            <button class="play-again-win">VOLVER A JUGAR</button>
+          </div>
+        </div>
       </section>
-
-    </main>
 
     <script src="main.js" type="module"></script>
   </body>

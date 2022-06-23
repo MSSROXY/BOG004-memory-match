@@ -67,8 +67,8 @@
   perspective: 800px;
 }
 .container-card {
-width: 150px;
-height: 190px;
+  width: 150px;
+  height: 190px;
   position: relative;
   transform-style: preserve-3d;
   transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -80,7 +80,7 @@ height: 190px;
   height: 100%;
   position: absolute;
   text-align: center;
-  display: flex ;
+  display: flex;
   align-items: center;
   justify-content: center;
   pointer-events: none;
@@ -90,11 +90,62 @@ height: 190px;
   background: rgba(196, 196, 196, 1);
 }
 .front-card img {
-  width: 120px
+  width: 120px;
 }
 .back-card img {
-  width: 100px
+  width: 100px;
 }
 .toggleCard {
   transform: rotateY(180deg);
+}
+/* MODAL */
+.modal-lose,
+.modal-win {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 40px;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  min-height: 100px;
+  background-color: #fff;
+  position: relative;
+  left: -30px;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 20px;
+}
+.container-modal h1{
+  color: #fe2f13;
+  font-size: 35px;
+}
+.container-modal img{
+  margin: 20px;
+  width: 70%;
+}
+.container-modal button{
+  width: 220px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: black;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 15px;
+}
+.container-modal button:hover{
+  background-color: #fe2f13;
+  transition: all 0.5s ease-in-out;
 }

@@ -17,8 +17,6 @@ import pokemon from "../data/pokemon/pokemon.js";
 
 let data = pokemon.items;
 
-export const randomizeCards = () => {data.sort(() => Math.random() - 0.5)}
-
 export const GenerateBoard = () => {
   const board = document.createElement("div");
   board.className="board-cards"
@@ -38,7 +36,7 @@ export const GenerateBoard = () => {
         </div>`);
     }
   }
-  randomizeCards();
+  data.sort(() => Math.random() - 0.5)
   board.innerHTML = cards.join("");
   return board;
 };
