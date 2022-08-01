@@ -67,7 +67,7 @@ const checkCards = (e) => {
       }
     }
   }
-  if (toggleCards.length === 2) {
+  if (toggleCards.length === 18) {
     setTimeout(() => modalWin.style.display = "flex", 1000)
   }
 };

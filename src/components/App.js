@@ -19,12 +19,12 @@ let data = pokemon.items;
 
 export const GenerateBoard = () => {
   const board = document.createElement("div");
-  board.className="board-cards"
+  // board.contains = []
+  board.className = "board-cards";
   let cards = [];
 
   for (let j = 0; j < 2; j++) {
     for (let i = 0; i < data.length; i++) {
-
       cards.push(`
         <div class="container-card" id="${data[i].id}" name="${data[i].id}">
           <div class="front-card">
@@ -35,10 +35,11 @@ export const GenerateBoard = () => {
           </div>
         </div>`);
     }
+
+    data.sort(() => Math.random() - 0.5);
+    board.innerHTML = cards.join("");
   }
-  data.sort(() => Math.random() - 0.5)
-  board.innerHTML = cards.join("");
   return board;
 };
-GenerateBoard();
 
+GenerateBoard();
