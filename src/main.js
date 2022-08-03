@@ -18,10 +18,10 @@ btnPlay.addEventListener("click", () => {
   screenOne.style.display = "none";
   screenTwo.style.display = "flex";
   allCards.forEach((card) => {
-    card.style.pointerEvents="none"
+    card.style.pointerEvents = "none";
     setTimeout(() => card.classList.add("toggleCard"), 500);
     setTimeout(() => card.classList.remove("toggleCard"), 5000);
-    setTimeout(() => card.style.pointerEvents="all",5500)
+    setTimeout(() => (card.style.pointerEvents = "all"), 5500);
   });
 });
 
@@ -68,7 +68,7 @@ const checkCards = (e) => {
     }
   }
   if (toggleCards.length === 18) {
-    setTimeout(() => modalWin.style.display = "flex", 1000)
+    setTimeout(() => (modalWin.style.display = "flex"), 1000);
   }
 };
 
@@ -82,9 +82,13 @@ const alertLose = () => {
 };
 const restartGame = document.querySelector(".play-again");
 restartGame.addEventListener("click", () => {
+  modalLose.style.display = "none";
+  modalWin.style.display = "none";
   window.location.reload();
 });
 const playAgain = document.querySelector(".play-again-win");
 playAgain.addEventListener("click", () => {
+  modalLose.style.display = "none";
+  modalWin.style.display = "none";
   window.location.reload();
-})
+});
