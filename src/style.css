@@ -65,6 +65,7 @@
   width: 90%;
   height: 80vh;
   justify-content: center;
+  align-items: center;
   gap: 15px;
   perspective: 800px;
 }
@@ -156,7 +157,9 @@
   }
   .welcome h1 {
     font-size: 3rem;
+    margin-top: 80px;
   }
+  
   .welcome p{
     font-size: 1.3rem;
   }
@@ -178,7 +181,7 @@
     width: 400px;
   }
   .welcome{
-    margin: 130px 0 0 0;
+    margin: 120px 0 0 0;
   }
   .welcome h1 {
     font-size: 3.5rem;
@@ -192,7 +195,7 @@
   }
   .container-card {
     width: 15%;
-    height: 180px;
+    height: 150px;
   }
 }
 @media (min-width: 1020px) {
